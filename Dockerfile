@@ -1,7 +1,7 @@
     
 FROM docker.elastic.co/elasticsearch/elasticsearch:7.1.1
 ENV ELASTICSEARCH_VERSION 7.1.1
-COPY elastic/hunspell /usr/share/elasticsearch/config/hunspell/
+COPY hunspell /usr/share/elasticsearch/config/hunspell/
 USER root
 RUN chown -R elasticsearch:elasticsearch config/*
 USER elasticsearch
