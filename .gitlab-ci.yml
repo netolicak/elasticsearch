@@ -1,0 +1,19 @@
+stages:
+  - build
+
+build-docker-and-push:
+  stage: build
+  script:
+    - "docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN registry.andweb.cz"
+
+    - "docker build -t registry.andweb.cz/andweb/elasticsearch:$CI_COMMIT_REF_NAME ."
+    - "docker push registry.andweb.cz/andweb/elasticsearch:$CI_COMMIT_REF_NAME"
+
+    - "docker logout registry.andweb.cz"
+
+  tags:
+    - docker
+
+  except:
+    - master
+
