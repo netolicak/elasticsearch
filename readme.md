@@ -12,14 +12,16 @@ Elastic plugins
 
 Hunspell
 --------
-Only czech dictionary included.
+CZ, DE, GR, US, ES, FR, HU, IT, PL, RU, SK, SE, UA dictionaries included
 
 OpenOffice word dictionaries.
 http://hunspell.github.io/
 
 Lemmagen
 --------
-Word lematization.
+Word lematization. 
+
+bg, cs, en, et, fr, hu, ro, sk, sl-rozaj, sl, uk, fa, mk, pl, ru, sr included
 
 https://github.com/vhyza/elasticsearch-analysis-lemmagen
 https://github.com/vhyza/lemmagen-lexicons

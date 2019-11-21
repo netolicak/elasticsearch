@@ -11,4 +11,5 @@ RUN elasticsearch-plugin install analysis-icu --batch \
   && curl -L -O https://github.com/vhyza/lemmagen-lexicons/archive/v1.0.tar.gz \
   && tar zxf v1.0.tar.gz \
   && mkdir config/lemmagen && mv ./lemmagen-lexicons-1.0/free/lexicons/* config/lemmagen/ \
+  && mv ./lemmagen-lexicons-1.0/non-free/lexicons/* config/lemmagen/ \
   && rm v1.0.tar.gz && rm -R ./lemmagen-lexicons-1.0
